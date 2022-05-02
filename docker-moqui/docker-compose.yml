@@ -1,6 +1,7 @@
 version: '3'
 services:
   tomcat:
+    image: tomcat_moqui:${TAG}
     build: .
     container_name: tomcat_moqui
     restart: always
