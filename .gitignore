@@ -1,1 +1,2 @@
-docker-tomcat/webapps/
+docker-moqui/webapps/
+docker-moqui/logs/
