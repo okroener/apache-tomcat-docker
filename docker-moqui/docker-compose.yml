@@ -14,6 +14,22 @@ services:
       - ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
     environment:
+      - instance_purpose=production
+      # - entity_ds_db_conf=mysql8
+      #- entity_ds_host=moqui-database
+      # - entity_ds_port=3306
+      # - entity_ds_database=moqui
+      # NOTE: using root user because for TX recovery MySQL requires the 'XA_RECOVER_ADMIN' and in version 8 that must be granted explicitly
+      # - entity_ds_user=root
+      # - entity_ds_password=moquiroot
+      # - entity_ds_crypt_pass='MoquiDefaultPassword:CHANGEME'
+      # moqui will accept traffic from other hosts but these are the values used for URL writing when specified:
+      - webapp_http_host=moqui
+      # - webapp_http_port=80
+      - webapp_https_port=8443
+      - webapp_https_enabled=true
+      - default_locale=de_DE
+      - default_time_zone=DE/Europe
       - elasticsearch_url=http://elasticsearch:9200
     networks:
       - backend
