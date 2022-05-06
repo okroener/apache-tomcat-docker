@@ -25,8 +25,8 @@ services:
       # - entity_ds_crypt_pass='MoquiDefaultPassword:CHANGEME'
       # moqui will accept traffic from other hosts but these are the values used for URL writing when specified:
       - VIRTUAL_HOST=moqui
-      - webapp_http_host=moqui-demo.oliver-kroener.de
-      - webapp_allow_origins=moqui-demo.oliver-kroener.de # allow origin and avoid 401 error
+      - webapp_http_host=moqui
+      - webapp_allow_origins=moqui # allow origin and avoid 401 error
       - webapp_http_port=80
       - webapp_https_port=443
       - webapp_https_enabled=true
