@@ -5,7 +5,7 @@ services:
     build: .
     container_name: ${TOMCAT_CONTAINER}
     restart: always
-    links:
+    depends_on:
       - elasticsearch
     ports:
       - "8443:8443"
