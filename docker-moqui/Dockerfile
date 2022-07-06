@@ -1,4 +1,4 @@
-FROM tomcat:9.0.62-jre11-temurin-focal
+FROM tomcat:9.0.64-jre11-temurin
 LABEL maintainer="Oliver Kroener <ok@oliver-kroener.de>"
 
 # Install snakeoil certificate 
